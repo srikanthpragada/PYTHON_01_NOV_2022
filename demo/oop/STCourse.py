@@ -25,3 +25,4 @@ c1 = Course("Python", 36, 10000)  # Create Object
 # print(c1.__fee)
 print(c1._Course__fee)
 print(c1.__dict__)
+print(Course.gettaxrate()) # call static method
