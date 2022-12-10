@@ -1,0 +1,5 @@
+<courses>
+    <course name="Python" fee="5000" duration="36"/>
+    <course name="Spring" fee="4000" duration="20"/>
+    <course name="React" fee="2500" duration="12"/>
+</courses>
