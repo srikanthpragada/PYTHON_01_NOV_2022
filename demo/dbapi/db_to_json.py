@@ -6,7 +6,7 @@ import dbutil
 
 
 # Convert tuple with emp details to dict
-def emp_to_dict(emp):
+def emp_to_dict(emp: tuple) -> dict:
     return {"id": emp[0], "name": emp[1], "job": emp[2], "salary": emp[3]}
 
 
@@ -16,14 +16,14 @@ cur = con.cursor()
 cur.execute("select * from employees")  # SQL Command
 
 for emp in cur.fetchall():
-    employees.append(emp_to_dict(emp)) # Tuple to dict
+    employees.append(emp_to_dict(emp))  # Tuple to dict
 
 cur.close()
 con.close()
 
-print(json.dumps(employees)) # list of dict to array of json objects
+print(json.dumps(employees))  # list of dict to array of json objects
 
 # Write to file
 f = open("employees.json", "wt")
-json.dump(employees, f)
+json.dump(employees, f) # write to file
 f.close()
